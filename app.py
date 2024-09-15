@@ -12,7 +12,7 @@ import csv
 app = Flask(__name__)
 
 # Load known faces and names from Training_images folder
-path = 'Training_images'
+path = 'hackathon-main\queue_reduction_system\Training_images'
 images = []
 classNames = []
 image_list = os.listdir(path)
@@ -86,7 +86,7 @@ def log_user(name):
 
 # Blink detection configuration
 detector = dlib.get_frontal_face_detector()
-predictor = dlib.shape_predictor('shape_predictor_68_face_landmarks.dat')
+predictor = dlib.shape_predictor('hackathon-main\queue_reduction_system\shape_predictor_68_face_landmarks.dat')
 
 def eye_aspect_ratio(eye):
     A = dist.euclidean(eye[1], eye[5])
